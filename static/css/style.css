@@ -49,3 +49,13 @@ body {
     transform: scale(1.05);
     box-shadow: 0 0 30px red;
 }
+
+.card h1 {
+    font-size: 30px;
+ }
+
+ .timeleft {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
