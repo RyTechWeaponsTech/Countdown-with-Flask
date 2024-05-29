@@ -187,3 +187,10 @@ body {
         font-size: 12px;
     }
 }
+
+/* Responsive for Desktop 1920x1080 */
+@media only screen and (max-width: 1920px) {
+    .section-center {
+        margin-bottom: 20px;
+    }
+}
