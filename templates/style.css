@@ -30,7 +30,7 @@ body {
 }
 
 .card {
-    color: rgb(214, 0, 0);
+    color: rgb(255, 0, 0);
     width: 100%;
     max-width: 600px;
     height: auto;
@@ -39,7 +39,7 @@ body {
     text-align: center;
     margin: auto;
     margin-top: 20%;
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(5px);
     border-radius: 30px;
     box-shadow: 1px 1px 4px 5px rgb(255, 0, 0);
     transition: all 0.3s ease;
@@ -50,12 +50,140 @@ body {
     box-shadow: 0 0 30px red;
 }
 
- .card h1 {
+.card h1 {
     font-size: 30px;
- }
+}
 
- .timeleft {
+.timeleft {
     display: flex;
     align-items: center;
     justify-content: center;
- }
+}
+
+.format h4 {
+    font-size: 15px;
+    padding: 10px;
+}
+
+.format {
+    place-items: center;
+    width: 5rem;
+    border: 0.5rem;
+    border-color: black;
+    height: 5rem;
+    border: 2px solid white;
+    border-radius: 20%;
+    margin: 2px;
+}
+
+.format span {
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 10px;
+}
+
+.card-footer {
+    margin: 10rem auto;
+    max-width: 300px;
+    color: white;
+    text-align: center;
+    margin: auto;
+    backdrop-filter: blur(3px);
+    background-color: #31313180;
+    opacity: 0.7;
+    border-radius: 20px;
+    box-shadow: 4px 4px 6px #1d1d1d59;
+}
+
+.card-footer a{
+    text-decoration: none;
+    color: crimson;
+    transition: 0.2s ease-in;
+}
+
+.card-footer a:hover {
+    color: rgb(129, 11, 34);
+    text-decoration: underline;
+}
+
+.card-footer h1 {
+    font-size: 18px;
+}
+
+
+
+
+/* Responsive for iPhone 12 Pro */
+@media only screen and (max-width: 390px) {
+    .section-center {
+        margin-bottom: 340px;
+    }
+
+    .card {
+        margin-top: 30%;
+        width: 85%;
+        backdrop-filter: blur(10px);
+        background-color: #31313180;
+    }
+
+    .card h1 {
+        font-size: 20px;
+        margin: 10px;
+    }
+
+    .card-footer h1 {
+        font-size: 15px;
+    }
+
+    .format h4 {
+        font-size: 20px;
+    }
+
+    .format {
+        width: 4rem;
+        height: 4rem;
+        margin: 2px;
+    }
+
+    .format span {
+        font-size: 8px;
+    }
+}
+
+
+/* Responsive for iPhone 14 Pro Max*/
+@media only screen and (max-width: 430px) {
+    .section-center {
+        margin-bottom: 370px;
+    }
+
+    .card {
+        backdrop-filter: blur(10px);
+        background-color: #31313180;
+    }
+}
+
+
+/* Responsive for iPad Mini */
+@media only screen and (min-width: 768px) and (min-width: 1024px){
+    .section-center {
+        margin-bottom: 450px;
+    }
+
+    .card {
+        backdrop-filter: blur(10px);
+        background-color: #31313180;
+    }
+
+    .format {
+        width: 6rem;
+        height: 6rem;
+        margin: 8px;
+    }
+
+    .format span {
+        margin-top: 3px;
+        font-size: 12px;
+    }
+}
