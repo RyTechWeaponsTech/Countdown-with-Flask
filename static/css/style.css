@@ -12,7 +12,7 @@
 }
 
 body {
-    background-image: url("../images/nuclearimage.png");
+    background-image: url("../static/images/nuclearimage.png");
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
@@ -52,6 +52,14 @@ body {
 
 .card h1 {
     font-size: 30px;
+}
+
+h1,
+h4 {
+    letter-spacing: 0.1rem;
+    text-transform: capitalize;
+    line-height: 2;
+    font-family: "Roboto", sans-serif;
 }
 
 .timeleft {

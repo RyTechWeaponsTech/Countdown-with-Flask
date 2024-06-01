@@ -54,6 +54,14 @@ body {
     font-size: 30px;
 }
 
+h1,
+h4 {
+    letter-spacing: 0.1rem;
+    text-transform: capitalize;
+    line-height: 2;
+    font-family: "Roboto", sans-serif;
+}
+
 .timeleft {
     display: flex;
     align-items: center;
