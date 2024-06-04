@@ -26,6 +26,8 @@ const weekdays = [
   "Saturday",
 ];
 
+// HTML DOM (Document Object Model) Document selector method
+const theLocation = document.querySelector(".target-location");
 const timeLeft = document.querySelector(".timeleft");
 const formatTime = document.querySelectorAll(".format h4");
 
@@ -34,16 +36,18 @@ let tempYear = tempDate.getFullYear();
 let tempMonth = tempDate.getMonth();
 let tempDay = tempDate.getDate();
 
-const futureBirthday = new Date(2025, 0, 26, 2, 30, 0);
+const futureBirthday = new Date(2025, 2, 5, 2, 30, 0);
 
 const year = futureBirthday.getFullYear();
 const hours = futureBirthday.getHours();
 const minutes = futureBirthday.getMinutes();
-
-let month = futureDate.getMonth();
+let month = futureBirthday.getMonth();
 month = months[month];
 const weekday = weekdays[futureBirthday.getDay()];
 const date = futureBirthday.getDate();
+
+// Manipulate the text of ".target-location"
+theLocation.textContent = `Target Location: Cross Dimension Arm Forces | ${weekday}, ${date} ${month} ${year} at ${hours}:${minutes} am`
 
 const futureTime = futureBirthday.getTime();
 
@@ -63,10 +67,34 @@ function getRemaindingTime() {
   let minutes = Math.floor((t % oneHour) / oneMinute);
   let seconds = Math.floor((t % oneMinute) / 1000);
 
-  // set values array
+  // set array values
   const values = [days, hours, minutes, seconds];
+
+  // manipulate every format element
+  function format(item) {
+    if (item < 10) {
+      return(item = `0${item}`)
+    } 
+
+    return item;
+  }
+
+  formatTime.forEach(function (item, index) {
+    item.innerHTML = format(values[index]);
+  });
+
+  if (t < 0){
+    clearInterval(countdown);
+    timeLeft.innerHTML = `<h4 class = "expired">NUCLEAR DETONATED</h4>`;
+  }
 }
 
 let countdown = setInterval(getRemaindingTime, 1000);
 
 getRemaindingTime;
+
+// Get the current year
+const currentYear = new Date().getFullYear();
+
+// Set the current year to the span with id "currentYear"
+document.getElementById("currentYear").textContent = currentYear;

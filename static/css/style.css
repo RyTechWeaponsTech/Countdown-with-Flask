@@ -12,7 +12,7 @@
 }
 
 body {
-    background-image: url("../static/images/nuclearimage.png");
+    background-image: url("../images/nuclearimage.png");
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
@@ -30,7 +30,7 @@ body {
 }
 
 .card {
-    color: rgb(255, 0, 0);
+    color: rgb(0, 0, 0);
     width: 100%;
     max-width: 600px;
     height: auto;
@@ -41,20 +41,31 @@ body {
     margin-top: 20%;
     backdrop-filter: blur(5px);
     border-radius: 30px;
-    box-shadow: 1px 1px 4px 5px rgb(255, 0, 0);
+    box-shadow: 1px 1px 4px 5px rgb(143, 0, 0);
     transition: all 0.3s ease;
 }
 
 .card:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 30px red;
+    box-shadow: 0 0 30px rgb(255, 0, 0);
 }
 
-.card h1 {
+.text h1 {
     font-size: 30px;
+    text-transform: capitalize;
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 10px;
 }
 
-h1,
+.text h4 {
+    font-size: 15px;
+    line-height: 1.5;
+    text-transform: none;
+    margin-bottom: 15px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
 h4 {
     letter-spacing: 0.1rem;
     text-transform: capitalize;
@@ -71,6 +82,13 @@ h4 {
 .format h4 {
     font-size: 15px;
     padding: 10px;
+}
+
+/* this selector to manipulate the js code */
+.timeleft .expired {
+    font-size: 1.5rem;
+    text-transform: none;
+    color: rgb(255, 0, 0);
 }
 
 .format {
@@ -119,13 +137,16 @@ h4 {
     font-size: 18px;
 }
 
+.card-footer h3 {
+    font-size: 10px;
+}
 
 
 
 /* Responsive for iPhone 12 Pro */
 @media only screen and (max-width: 390px) {
     .section-center {
-        margin-bottom: 340px;
+        margin-bottom: 19rem;
     }
 
     .card {
@@ -142,6 +163,16 @@ h4 {
 
     .card-footer h1 {
         font-size: 15px;
+    }
+
+    .text h1 {
+        font-size: 30px;
+    }
+
+    .text h4 {
+        font-size: 15px;
+        padding-left: 35px;
+        padding-right: 35px;
     }
 
     .format h4 {
@@ -163,7 +194,11 @@ h4 {
 /* Responsive for iPhone 14 Pro Max*/
 @media only screen and (max-width: 430px) {
     .section-center {
-        margin-bottom: 370px;
+        margin-bottom: 19rem;
+    }
+
+    .format {
+        margin-bottom: 15px;
     }
 
     .card {
