@@ -14,7 +14,7 @@ const months = [
   "November",
   "December",
 ];
-  
+
 // variable for day lists
 const weekdays = [
   "Sunday",
@@ -36,7 +36,7 @@ let tempYear = tempDate.getFullYear();
 let tempMonth = tempDate.getMonth();
 let tempDay = tempDate.getDate();
 
-const futureBirthday = new Date(2025, 2, 5, 2, 30, 0);
+const futureBirthday = new Date(2024, 6, 10, 14, 30, 0);
 
 const year = futureBirthday.getFullYear();
 const hours = futureBirthday.getHours();
@@ -47,7 +47,7 @@ const weekday = weekdays[futureBirthday.getDay()];
 const date = futureBirthday.getDate();
 
 // Manipulate the text of ".target-location"
-theLocation.textContent = `Target Location: Cross Dimension Arm Forces | ${weekday}, ${date} ${month} ${year} at ${hours}:${minutes} am`
+theLocation.textContent = `Target Location: Jl. Medan Merdeka Barat No.92, DKI Jakarta | ${weekday}, ${date} ${month} ${year} at ${hours}:${minutes}`;
 
 const futureTime = futureBirthday.getTime();
 
@@ -73,8 +73,8 @@ function getRemaindingTime() {
   // manipulate every format element
   function format(item) {
     if (item < 10) {
-      return(item = `0${item}`)
-    } 
+      return (item = `0${item}`);
+    }
 
     return item;
   }
@@ -83,7 +83,7 @@ function getRemaindingTime() {
     item.innerHTML = format(values[index]);
   });
 
-  if (t < 0){
+  if (t < 0) {
     clearInterval(countdown);
     timeLeft.innerHTML = `<h4 class = "expired">NUCLEAR DETONATED</h4>`;
   }
