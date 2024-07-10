@@ -36,7 +36,7 @@ let tempYear = tempDate.getFullYear();
 let tempMonth = tempDate.getMonth();
 let tempDay = tempDate.getDate();
 
-const futureBirthday = new Date(2024, 6, 10, 14, 30, 0);
+const futureBirthday = new Date(2024, 6, 25, 14, 30, 0);
 
 const year = futureBirthday.getFullYear();
 const hours = futureBirthday.getHours();
